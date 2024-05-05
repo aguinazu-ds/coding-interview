@@ -9,6 +9,19 @@
 
 #salmon-overview{
 
+    .cs-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        // for desktop the view is a row
+        @media (min-width: 768px) {
+            flex-direction: row;
+        }
+        overflow: hidden;
+    }
+
     .image-group {
         width: calc(730 / 16 * 1em);
         height: calc(561 / 16 * 1em);
@@ -17,6 +30,15 @@
             width: calc(730 / 16 * 1em);
             height: calc(561 / 16 * 1em);
         }
+    }
+
+    ul {
+        padding-left: 1.5rem;
+    }
+
+    li::marker {
+        color: #049A4B;
+        font-size: 1.5em;
     }
 }
 
@@ -30,6 +52,50 @@
         .cs-picture1 {
             width: calc(598 / 16 * 1em);
             height: calc(536 / 16 * 1em);
+        }
+
+        display: none;
+
+        @media (min-width: 769px) {
+            overflow: hidden;
+            border-top-left-radius: 60%;
+            border-bottom-left-radius: 40%;
+            display: block;
+            width: 45%;
+
+            img {
+                height: 100%;
+                width: 100%;
+                transform: translateY(-20%);
+            }
+        }
+    }
+
+    .cs-container {
+        overflow: hidden;
+        height: 364px;
+        border-radius: 27px;
+        background-color: #25082D;
+        display: flex;
+        
+    }
+
+    .text-services-container {
+        padding-top: 40px;
+        padding-left: 39px;
+        padding-right: 20px;
+        padding-bottom: 30px;
+    }
+    .cs-title {
+        color: #fff;
+    }
+
+    .cs-text {
+        color: #fff;
+        font-weight: 500;
+
+        &.button-below {
+            margin-bottom: 2.5rem;
         }
     }
 }
@@ -45,4 +111,42 @@
             height: calc(690 / 16 * 1em);
         }
     }
+
+    .cs-title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    #card-1 {
+        h1 {
+            color: #145FA4;
+        }
+    }
+
+    #card-2 {
+        h1 {
+            color: #145FA4;
+        }
+
+        .text-highlight {
+            color: #25082D;
+        }
+    }
+
+    #card-3 {
+        background-color: #25082D;
+
+        h1 {
+            color: #E9E6EA;
+        }
+
+        .text-highlight {
+            color: #E9E6EA;
+        }
+
+        .discount-text {
+            color: #fff;
+        }
+    }
+
 }
